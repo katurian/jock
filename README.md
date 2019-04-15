@@ -3,7 +3,7 @@ This bot converts centimeters to inches, kilograms to pounds, and vice versa. Us
 
 # TEST CASE:
 
-Chat Input: IN 55 CM
+Chat Input: IN 55 CM <br>
 Bot Output: 55 centimeters is approximately 2'-2, or 22 inches
 
 Chat Input: CM 6'5
