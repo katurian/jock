@@ -6,21 +6,21 @@ client.on('message', (receivedMessage) => {
     return
 }
 
-if (receivedMessage.content.startsWith("KG ")) {
+if (receivedMessage.content.toUpperCase().startsWith("KG ")) {
     var input = parseFloat(String(receivedMessage.content).slice(3, receivedMessage.length));
     var output = Math.round(input/2.2046);
     receivedMessage.channel.send(String(input) + " pounds is approximately " + String(output) + " kilograms" );
 
 }
 
-if (receivedMessage.content.startsWith("LB ")) {
+if (receivedMessage.content.toUpperCase().startsWith("LB ")) {
     var input = parseFloat(String(receivedMessage.content).slice(3, receivedMessage.length));
     var output = Math.round(input * 2.205);
     receivedMessage.channel.send(String(input) + " kilograms is approximately " + String(output) + " pounds" );
 
 }
 
-if (receivedMessage.content.startsWith("CM ")) {
+if (receivedMessage.content.toUpperCase().startsWith("CM ")) {
     var feet = parseFloat(String(receivedMessage.content).slice(3, 5));
     var inches = parseFloat(String(receivedMessage.content).slice(5, receivedMessage.length));
     var total = ((feet * 12) + inches);
@@ -29,7 +29,7 @@ if (receivedMessage.content.startsWith("CM ")) {
 
 }
 
-if (receivedMessage.content.startsWith("IN ")) {
+if (receivedMessage.content.toUpperCase().startsWith("IN ")) {
     var input = parseFloat(String(receivedMessage.content).slice(3, receivedMessage.length));
     var output = Math.round(input/2.54);
     var feet = Math.floor(output/12);
